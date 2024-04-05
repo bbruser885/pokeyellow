@@ -788,41 +788,41 @@ ItemUsePokedex:
 	predef_jump ShowPokedexMenu
 
 ItemUseEvoStone:
-	ld a, [wIsInBattle]
-	and a
-	jp nz, ItemUseNotTime
-	ld a, [wWhichPokemon]
-	push af
-	ld a, [wcf91]
-	ld [wEvoStoneItemID], a
-	push af
-	ld a, EVO_STONE_PARTY_MENU
-	ld [wPartyMenuTypeOrMessageID], a
-	ld a, $ff
-	ld [wUpdateSpritesEnabled], a
-	call DisplayPartyMenu
-	ld a, [wcf91]
-	ld [wLoadedMon], a
-	pop bc
-	jr c, .canceledItemUse
-	ld a, b
-	ld [wcf91], a
-	call Func_d85d
-	jr nc, .noEffect
-	callfar IsThisPartymonStarterPikachu_Party
-	jr nc, .notPlayerPikachu
-	ld e, $1b
-	callfar PlayPikachuSoundClip
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
-	ld hl, RefusingText
-	call PrintText
-	ld a, $4
-	ld [wd49c], a
-	ld a, $82
-	ld [wPikachuMood], a
-	jr .canceledItemUse
+    ld a, [wIsInBattle]
+    and a
+    jp nz, ItemUseNotTime
+    ld a, [wWhichPokemon]
+    push af
+    ld a, [wcf91]
+    ld [wEvoStoneItemID], a
+    push af
+    ld a, EVO_STONE_PARTY_MENU
+    ld [wPartyMenuTypeOrMessageID], a
+    ld a, $ff
+    ld [wUpdateSpritesEnabled], a
+    call DisplayPartyMenu
+    ld a, [wcf91]
+    ld [wLoadedMon], a
+    pop bc
+    jr c, .canceledItemUse
+    ld a, b
+    ld [wcf91], a
+    call Func_d85d
+    jr nc, .noEffect
+    ; Removed the call to check if Pikachu is a starter.
+    ld e, $1b
+    callfar PlayPikachuSoundClip
+    ld a, [wWhichPokemon]
+    ld hl, wPartyMonNicks
+    call GetPartyMonName
+    ld hl, RefusingText
+    call PrintText
+    ld a, $4
+    ld [wd49c], a
+    ld a, $82
+    ld [wPikachuMood], a
+    jr .canceledItemUse
+
 
 .notPlayerPikachu
 	ld a, SFX_HEAL_AILMENT

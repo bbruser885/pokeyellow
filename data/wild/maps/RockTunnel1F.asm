@@ -1,15 +1,15 @@
 RockTunnel1FWildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 15, ZUBAT
-	db 16, GEODUDE
-	db 17, ZUBAT
-	db 19, ZUBAT
-	db 18, GEODUDE
-	db 20, GEODUDE
+	db 20, ZUBAT
+	db 21, GEODUDE
 	db 21, ZUBAT
-	db 17, MACHOP
-	db 19, MACHOP
-	db 21, MACHOP
+	db 22, ZUBAT
+	db 22, GEODUDE
+	db 24, GRAVELER
+	db 25, GOLBAT
+	db 23, MACHOP
+	db 24, MACHOP
+	db 26, MACHOKE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

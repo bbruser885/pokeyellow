@@ -512,7 +512,7 @@ StaryuEvosMoves:
 	db 32, SWIFT
 	db 37, MINIMIZE
 	db 42, LIGHT_SCREEN
-	db 47, HYDRO_PUMP
+	db 45, HYDRO_PUMP
 	db 0
 
 BlastoiseEvosMoves:
@@ -571,11 +571,11 @@ GrowlitheEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, ARCANINE
 	db 0
 ; Learnset
-	db 18, EMBER
-	db 23, LEER
-	db 30, TAKE_DOWN
-	db 39, AGILITY
-	db 50, FLAMETHROWER
+	db 15, EMBER
+	db 23, FIRE_SPIN
+	db 28, BODY_SLAM
+	db 34, FLAMETHROWER
+	db 40, FIRE_BLAST
 	db 0
 
 OnixEvosMoves:
@@ -641,13 +641,13 @@ KadabraEvosMoves:
 
 GravelerEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, GOLEM
+	db EVOLVE_LEVEL, 42, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
 	db 21, SELFDESTRUCT
-	db 29, HARDEN
+	db 29, ROCK_SLIDE
 	db 36, EARTHQUAKE
 	db 43, EXPLOSION
 	db 0
@@ -1720,7 +1720,7 @@ MissingNo92EvosMoves:
 
 HaunterEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, GENGAR
+	db EVOLVE_LEVEL, 40, GENGAR
 	db 0
 ; Learnset
 	db 29, HYPNOSIS
@@ -1800,8 +1800,8 @@ VenusaurEvosMoves:
 	db 22, POISONPOWDER
 	db 30, RAZOR_LEAF
 	db 43, GROWTH
-	db 55, SLEEP_POWDER
-	db 65, SOLARBEAM
+	db 48, SLUDGE
+	db 55, SOLARBEAM
 	db 0
 
 TentacruelEvosMoves:
@@ -1952,8 +1952,8 @@ GeodudeEvosMoves:
 ; Learnset
 	db 11, DEFENSE_CURL
 	db 16, ROCK_THROW
-	db 21, SELFDESTRUCT
-	db 26, HARDEN
+	db 21, DIG
+	db 26, ROCK_SLIDE
 	db 31, EARTHQUAKE
 	db 36, EXPLOSION
 	db 0

@@ -1,15 +1,15 @@
 Route23WildMons:
 	def_grass_wildmons 10 ; encounter rate
-	db 41, NIDORINO
-	db 41, NIDORINA
-	db 36, MANKEY
-	db 44, NIDORINO
-	db 44, NIDORINA
-	db 40, FEAROW
-	db 41, MANKEY
-	db 45, FEAROW
-	db 41, PRIMEAPE
-	db 46, PRIMEAPE
+	db 51, NIDORINO
+	db 51, NIDORINA
+	db 46, MANKEY
+	db 54, NIDOKING
+	db 54, NIDOQUEEN
+	db 50, FEAROW
+	db 52, PRIMEAPE
+	db 53, FEAROW
+	db 51, PRIMEAPE
+	db 52, PRIMEAPE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
